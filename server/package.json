@@ -6,10 +6,8 @@
   "scripts": {
     "build": "tsc",
     "prestart": "npm run build",
-    "lint": "eslint . --ext .ts",
     "start": "node .",
-    "test": "jest",
-    "test:watch": "jest --watch"
+    "test": "jest"
   },
   "dependencies": {
     "cors": "2.8.5",
