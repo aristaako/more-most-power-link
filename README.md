@@ -4,6 +4,10 @@ A TypeScript application for solving out what is the link station with the most 
 
 ## Prerequisites
 
+- Node version 15 or newer
+- npm version 7 or newer
+- Chrome Browser version 94.x.x
+
 ## Client
 
 [Client](client/README.md)
