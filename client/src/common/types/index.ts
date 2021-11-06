@@ -3,34 +3,37 @@ type Coordinates = {
   y: string
 }
 
-//TODO: milloin käytetään typeä ja milloin interfacea?
+type InputOnChangeFunction = (coordinateKey: string, value: string) => void
 
-export type ErrorProps = {
+export interface ErrorProps {
   error: string
 }
 
-type InputOnChangeFunction = (coordinateKey: string, value: string) => void
-
-export type InputProps = {
+export interface InputProps {
   inputKey: string
   label: string
   onChange: InputOnChangeFunction
   value?: string
 }
 
-export type InputsProps = {
+export interface InputsProps {
   coordinates: Coordinates
   onChange: InputOnChangeFunction
+}
+
+export interface PowerButtonProps {
+  onClick: () => void
+}
+
+export interface StationInfoProps {
+  coordinates: Coordinates
+  stations: StationArrayOrNull
 }
 
 export type MostPowerLinkStationData = {
   stations?: Station[]
   error?: string
   status: number
-}
-
-export type PowerButtonProps = {
-  onClick: () => void
 }
 
 export type Station = {
@@ -43,8 +46,3 @@ export type Station = {
 }
 
 export type StationArrayOrNull = Station[] | null
-
-export type StationInfoProps = {
-  coordinates: Coordinates
-  stations: StationArrayOrNull
-}

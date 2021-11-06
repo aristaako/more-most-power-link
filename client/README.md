@@ -15,10 +15,22 @@ Template from [Create React App](https://github.com/facebook/create-react-app).
 
 To start the app run:
 
-    npm start
+    $ npm start
+
+## End-to-end testing
+
+Chromedriver 94.0.0 requires version 94 of Chrome browser to work.
+
+To run Nightwatch.js tests run:
+
+    $ npm test
+
+### If Chrome driver gets stuck, running the script will kill the process:
+
+    $ ./killChromeDriver.sh
 
 ## Production build
 
 To create a production build run:
 
-    npm run build
+    $ npm run build

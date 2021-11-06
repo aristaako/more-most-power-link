@@ -13,10 +13,10 @@ Exposes api /link for the calculation.
 
 To start a web server for the application, run:
 
-    npm run start
+    $ npm run start
 
 ### Running tests
 
 To run all unit tests, run:
 
-    npm test
+    $ npm test

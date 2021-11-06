@@ -78,7 +78,7 @@ function Inputs({ coordinates, onChange }: InputsProps) {
 function PowerButton({ onClick }: PowerButtonProps) {
   return (
     <Grid item>
-      <Button onClick={onClick} variant="contained">
+      <Button id="find-out-power-button" onClick={onClick} variant="contained">
         Find out
       </Button>
     </Grid>
@@ -90,26 +90,22 @@ function StationInfo({ coordinates, stations }: StationInfoProps) {
   if (!stations) {
     return <React.Fragment />
   } else {
+    let searchResult
     if (stations.length == 0) {
-      return (
-        <Grid item>
-          <Typography variant="body1">
-            {`No link station within reach for point ${point}`}
-          </Typography>
-        </Grid>
-      )
+      searchResult = `No link station within reach for point ${point}`
     } else {
       const bestStation = stations[0]
       const bestStationCoordinates = `${bestStation.x},${bestStation.y}`
       const bestStationPower = bestStation.power
-      return (
-        <Grid item>
-          <Typography variant="body1">
-            {`Best link station for point ${point} is ${bestStationCoordinates} with power ${bestStationPower}`}
-          </Typography>
-        </Grid>
-      )
+      searchResult = `Best link station for point ${point} is ${bestStationCoordinates} with power ${bestStationPower}`
     }
+    return (
+      <Grid item>
+        <Typography id="search-result" variant="body1">
+          {searchResult}
+        </Typography>
+      </Grid>
+    )
   }
 }
 
