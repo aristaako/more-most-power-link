@@ -4,6 +4,7 @@ import cors from 'cors'
 import { isInputValid } from './common/utils'
 import { getLinkPower } from './link'
 
+const port = process.env.PORT || 9000
 const app = express()
 app.use(
   cors({
@@ -24,6 +25,6 @@ app.get('/link', (req: any, res) => {
   inputsValid ? res.send(getLinkPower(x, y)) : res.send('nono')
 })
 
-app.listen(9000, () => {
-  console.log('More Most Power Link started on 9000.')
+app.listen(port, () => {
+  console.log(`More Most Power Link started on ${port}.`)
 })
