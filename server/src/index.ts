@@ -6,11 +6,7 @@ import { getLinkPower } from './link'
 
 const port = process.env.PORT || 9000
 const app = express()
-app.use(
-  cors({
-    origin: 'http://localhost:3000'
-  })
-)
+app.use(cors())
 
 app.get('/', (req: any, res) => {
   res.send('more-most-power-link')
